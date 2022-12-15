@@ -29,7 +29,9 @@ namespace Full_GRASP_And_SOLID.Library
         {
             this.tasks.Remove(task);
         }
-        double GetProductionCost()
+        //Aca usamos el principio de experto ya que la clase Building es la que tenia la informacion ncesaria
+        //para poder cumplir con la responsabilidad de calcular el costo de la tarea
+        public double GetProductionCost()
         {
             ArrayList tasks = this.tasks;
             double costoTotal = 0;
