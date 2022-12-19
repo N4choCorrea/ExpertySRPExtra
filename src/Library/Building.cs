@@ -19,7 +19,7 @@ namespace Full_GRASP_And_SOLID.Library
         }
 
         public string Description { get; set; }
-
+        //no permitir que cualquiera pueda agregar o quitar tareas, que cada
         public void AddTask(Task task)
         {
             this.tasks.Add(task);
@@ -30,7 +30,7 @@ namespace Full_GRASP_And_SOLID.Library
             this.tasks.Remove(task);
         }
         //Aca usamos el principio de experto ya que la clase Building es la que tenia la informacion ncesaria
-        //para poder cumplir con la responsabilidad de calcular el costo de la tarea
+        //para poder cumplir con la responsabilidad de calcular el costo de la tareabulding rombo a task flecha
         public double GetProductionCost()
         {
             ArrayList tasks = this.tasks;
@@ -45,7 +45,7 @@ namespace Full_GRASP_And_SOLID.Library
                 double Equipo = task.Equipment.HourlyCost;
                 double CostoTotal = costoUnitario + Equipo;
             }
-            return costoTotal;
+            return (costoTotal);
             if (costoTotal < 0)
             {
                 throw new Exception("El costo no puede ser negativo");
