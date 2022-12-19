@@ -6,7 +6,7 @@ namespace Tests
 {
     public class TestBuilding
     {
-        [Test]
+        /*[Test]
         public void TestGetProductionCost()
         {
             Building building = new Building("Torre");
@@ -21,9 +21,9 @@ namespace Tests
             {
                 Assert.Fail("No debería haber lanzado excepción");
             }
-        }
-        [Test]
-        public void TestConsolePrinter()
+        }*/
+        //[Test]
+        /*public void TestConsolePrinter()
         {
             Building building = new Building("Torre");
             building.AddTask(new Task(new Supply("Cemento", 100), 100, new Tool("Hormigonera", 1000), 120));
@@ -38,6 +38,6 @@ namespace Tests
             {
                 Assert.Fail("No debería haber lanzado excepción");
             }
-        }
+        }*/
     }
 }
