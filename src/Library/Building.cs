@@ -20,8 +20,9 @@ namespace Full_GRASP_And_SOLID.Library
 
         public string Description { get; set; }
         //no permitir que cualquiera pueda agregar o quitar tareas, que cada
-        public void AddTask(Task task)
+        public void AddTask(Supply material, double quantity, Tool equipment, int time)
         {
+            Task task = new Task(material, quantity, equipment, time);
             this.tasks.Add(task);
         }
 
