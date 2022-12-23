@@ -30,8 +30,10 @@ namespace Full_GRASP_And_SOLID
             IPrinter printer2 = new FilePrinter();
             printer.PrintBuilding(tower);
             printer2.PrintBuilding(tower);
+            
             ICostable costable = tower;
             costable = new Building("Torre");
+            
 
         }
 

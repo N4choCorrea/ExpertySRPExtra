@@ -9,7 +9,7 @@ using System.Collections;
 
 namespace Full_GRASP_And_SOLID.Library
 {
-    public class Building : IPrintable, ICostable
+    public class Building : IPrintable
     {
         private ArrayList tasks = new ArrayList();
 
@@ -40,11 +40,12 @@ namespace Full_GRASP_And_SOLID.Library
             double costoUnitario = 0;
             foreach (Task task in tasks)
             {
-                double CostoMateriales = task.Material.UnitCost* task.Quantity;
+                double CostoUnitario = task.Material.UnitCost;
                 int tiempo = task.Time;
-                double CostoHerramienta = task.Equipment.HourlyCost * tiempo;
-                
-                costoTotal = CostoMateriales + CostoHerramienta;
+                double CostoTotalportarea = CostoUnitario * tiempo;
+                costoUnitario = costoUnitario + CostoTotalportarea;
+                double Equipo = task.Equipment.HourlyCost;
+                double CostoTotal = costoUnitario + Equipo;
             }
             return (costoTotal);
             if (costoTotal < 0)
