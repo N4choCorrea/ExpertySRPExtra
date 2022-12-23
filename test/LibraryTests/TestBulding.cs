@@ -6,13 +6,13 @@ namespace Tests
 {
     public class TestBuilding
     {
-        /*[Test]
+        [Test]
         public void TestGetProductionCost()
         {
             Building building = new Building("Torre");
-            building.AddTask(new Task(new Supply("Cemento", 100), 100, new Tool("Hormigonera", 1000), 120));
-            building.AddTask(new Task(new Supply("Arena", 200), 200, new Tool("Hormigonera", 1000), 120));
-            building.AddTask(new Task(new Supply("Tabla", 300), 50, new Tool("Martillo", 2000), 15));
+            building.AddTask(new Supply("Cemento", 100), 100, new Tool("Hormigonera", 1000), 120);
+            building.AddTask(new Supply("Arena", 200), 200, new Tool("Hormigonera", 1000), 120);
+            building.AddTask(new Supply("Tabla", 300), 50, new Tool("Martillo", 2000), 15);
             try
             {
                 building.GetProductionCost();
@@ -21,14 +21,14 @@ namespace Tests
             {
                 Assert.Fail("No debería haber lanzado excepción");
             }
-        }*/
-        //[Test]
-        /*public void TestConsolePrinter()
+        }
+        [Test]
+        public void TestConsolePrinter()
         {
             Building building = new Building("Torre");
-            building.AddTask(new Task(new Supply("Cemento", 100), 100, new Tool("Hormigonera", 1000), 120));
-            building.AddTask(new Task(new Supply("Arena", 200), 200, new Tool("Hormigonera", 1000), 120));
-            building.AddTask(new Task(new Supply("Tabla", 300), 50, new Tool("Martillo", 2000), 15));
+            building.AddTask(new Supply("Cemento", 100), 100, new Tool("Hormigonera", 1000), 120);
+            building.AddTask(new Supply("Arena", 200), 200, new Tool("Hormigonera", 1000), 120);
+            building.AddTask(new Supply("Tabla", 300), 50, new Tool("Martillo", 2000), 15);
             ConsolePrinter printer = new ConsolePrinter();
             try
             {
@@ -38,6 +38,7 @@ namespace Tests
             {
                 Assert.Fail("No debería haber lanzado excepción");
             }
-        }*/
+        }
+        
     }
 }

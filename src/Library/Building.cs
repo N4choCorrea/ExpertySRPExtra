@@ -39,12 +39,11 @@ namespace Full_GRASP_And_SOLID.Library
             double costoUnitario = 0;
             foreach (Task task in tasks)
             {
-                double CostoUnitario = task.Material.UnitCost;
+                double CostoMateriales = task.Material.UnitCost* task.Quantity;
                 int tiempo = task.Time;
-                double CostoTotalportarea = CostoUnitario * tiempo;
-                costoUnitario = costoUnitario + CostoTotalportarea;
-                double Equipo = task.Equipment.HourlyCost;
-                double CostoTotal = costoUnitario + Equipo;
+                double CostoHerramienta = task.Equipment.HourlyCost * tiempo;
+                
+                costoTotal = CostoMateriales + CostoHerramienta;
             }
             return (costoTotal);
             if (costoTotal < 0)
